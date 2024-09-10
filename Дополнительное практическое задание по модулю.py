@@ -5,7 +5,7 @@ for i in range(entered_number ,numbers[entered_number]):
     for j in range(1, len(numbers)):
        for l in range(j,len(numbers)):
            sum_ = j + l
-           if  i % sum_ == 0:
+           if i % sum_ == 0:
                key_door.append([j,l])
 
     print(i , key_door)
