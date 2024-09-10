@@ -3,23 +3,12 @@ entered_number = int(input('Введите число от 3 до 20: '))
 key_door = []
 for i in range(entered_number ,numbers[entered_number]):
     for j in range(1, len(numbers)):
-       for l in range(1,len(numbers)):
+       for l in range(j,len(numbers)):
            sum_ = j + l
-           if i % sum_ == 0:
-               key_door.append(j)
-               key_door.append(l)
-    if entered_number == 8:
-        a = key_door[:len(key_door) // 2 + 1]
-        b = key_door[len(key_door) // 2:]
-    if entered_number == 18:
-        a = key_door[:len(key_door) // 2 + 1]
-        b = key_door[len(key_door) // 2:]
-    if entered_number != 8 and entered_number != 18:
-        a = key_door[:len(key_door)//2]
-        b = key_door[len(key_door)//2:]
-    print(i , a)
-    key_door = []
+           if  i % sum_ == 0:
+               key_door.append([j,l])
 
+    print(i , key_door)
 
 
 
